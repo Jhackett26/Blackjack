@@ -1,11 +1,15 @@
 public class Main {
     public Card[] deck;
-    public Player player1;
+    public Player[] players;
+    public int[] dealtCard;
     public static void main(String[] args) {
         Main m = new Main();
     }
     public Main(){
-        player1 = new Player();
+        players = new Player[4];
+        for(int i=0;i<players.length;i++){
+            players[i] = new Player();
+        }
 
         deck = new Card[52];
         int counter = 0;
@@ -26,12 +30,15 @@ public class Main {
             deck[i].Info();
         }
     }
-    public void deal(){
-        for(int i= 0; i< player1.hand.length;i++) {
-            player1.hand[i] = deck[i];
-            // isDealt variable if isDealt{i++}
+    public void deal() {
+        for (int x = 0; x < players.length; x++) {
+            for (int i = 0; i < players[x].hand.length; i++) {
+                dealtCard1 = dealtCard1 + i;
+                players[x].hand[i] = deck[i];
+                // isDealt variable --  if (isDealt){i++}
+            }
+            //print hand
         }
-        player1.printHand();
     }
     public void shuffle() {
         for (int i = 0; i < 52; i++) {

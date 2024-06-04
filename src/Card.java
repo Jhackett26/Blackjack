@@ -3,6 +3,7 @@ public class Card {
     public String cardName;
     public String suitName;
     public int suitNum;
+    public boolean isDealt;
     public int points;
 
     public Card(int paramCardNum, int paramSuit){
